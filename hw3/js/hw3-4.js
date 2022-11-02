@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const firstNumber = prompt('Enter the first number', '');
-    const firstNumberTypeofNumber = Number(firstNumber);
+    const firstNumber = Number(prompt('Enter the first number', ''));
+    const secondNumber = Number(prompt('Enter the second number', ''));
 
-    const secondNumber = prompt('Enter the second number', '');
-    const secondNumberTypeofNumber = Number(secondNumber);
 
-    const sum = firstNumberTypeofNumber + secondNumberTypeofNumber;
-    const difference = firstNumberTypeofNumber - secondNumberTypeofNumber;
-    const multiplication = firstNumberTypeofNumber * secondNumberTypeofNumber;
-    const division = firstNumberTypeofNumber / secondNumberTypeofNumber;
+    const sum = firstNumber + secondNumber;
+    const difference = firstNumber - secondNumber;
+    const multiplication = firstNumber * secondNumber;
+    const division = firstNumber / secondNumber;
 
     alert(`
-        ${firstNumberTypeofNumber} + ${secondNumberTypeofNumber} = ${sum},
-        ${firstNumberTypeofNumber} - ${secondNumberTypeofNumber} = ${difference},
+        ${firstNumber} + ${secondNumber} = ${sum},
+        ${firstNumber} - ${secondNumber} = ${difference},
         ${firstNumber} * ${secondNumber} = ${multiplication},
         ${firstNumber} / ${secondNumber} = ${division}
     `);
