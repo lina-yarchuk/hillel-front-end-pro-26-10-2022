@@ -1,14 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const firstNumber = prompt('Enter the first number', '');
-    const firstNumberTypeofNumber = Number(firstNumber);
+    const firstNumber = Number(prompt('Enter the first number', ''));
+    const secondNumber = Number(prompt('Enter the second number', ''));
+    const thirdNumber = Number(prompt('Enter the third number', ''));
 
-    const secondNumber = prompt('Enter the second number', '');
-    const secondNumberTypeofNumber = Number(secondNumber);
+    const result = (firstNumber + secondNumber + thirdNumber) / 3;
 
-    const thirdNumber = prompt('Enter the third number', '');
-    const thirdNumberTypeofNumber = Number(thirdNumber);
+    const validFirstNumber = typeof firstNumber === 'number' && !isNaN(firstNumber);
+    const validSecondNumber = typeof secondNumber === 'number' && !isNaN(secondNumber);
+    const validThirdNumber = typeof thirdNumber === 'number' && !isNaN(thirdNumber);
+    const validResult = typeof result === 'number' && !isNaN(result);
 
-    const result = (firstNumberTypeofNumber + secondNumberTypeofNumber + thirdNumberTypeofNumber) / 3;
-
-    alert(`Arithmetic mean between ${firstNumberTypeofNumber} and ${secondNumberTypeofNumber} and ${thirdNumberTypeofNumber} = ${result}`);
+    if (validFirstNumber && validSecondNumber && validThirdNumber && validResult) {
+        alert(`Arithmetic mean between ${firstNumber} and ${secondNumber} and ${thirdNumber} = ${result}`);
+    } else {
+        alert('Wrong input.');
+    }
 });
