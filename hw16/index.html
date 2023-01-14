@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw22 Number of prototype levels</title>
+</head>
+<body>
+
+<h1> ДЗ 22. Кількість рівнів прототипу</h1>
+<p>Напишіть функцію, яка приймає об'єкт і повертає кількість рівнів прототипного успадкування цього об'єкту.</p>
+
+<p>Підказка: Згадайте про рекурсію і про метод Object.getPrototypeOf().</p>
+
+<p>Для перевірки:</p>
+<pre>
+      const obj = { a: 1 };
+      const obj2 = Object.create(obj);
+      const obj3 = Object.create(obj2);
+
+      console.log(layersOfInheritance({})); // 0
+      console.log(layersOfInheritance(new Date())); // 1
+      console.log(layersOfInheritance(obj3)); // 2
+   </pre>
+
+<p>(Підказка) Згадайте про рекурсію і почитайте про метод Object getPrototypeOf. Ну і звичайно -- прототипи))</p>
+
+<script src="./js/hw-16-number-of-prototype-levels.js"></script>
+</body>
+</html>
