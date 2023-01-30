@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DZ 27. Start the code</title>
+</head>
+<body>
+
+<h1>Чому код працює неправильно?</h1>
+
+    <pre>
+         function getPasswordFromUser(success, fail) {
+            let password = prompt("Password?", '');
+            if (password === "rockstar") success();
+            else fail();
+         }
+
+         let user = {
+            fName: 'Andrew',
+
+            loginSuccess() {
+               alert(`${this.fName} logged in`);
+            },
+
+            loginFail() {
+               alert(`${this.fName} failed to log in`);
+            },
+
+         };
+
+         <u><b>getPasswordFromUser(user.loginSuccess, user.loginFail);</b></u>
+    </pre>
+
+<p>Змінювати дозволено лише виділений рядок</p>
+
+<script src="./js/hw-27-start-code.js"></script>
+</body>
+</html>
