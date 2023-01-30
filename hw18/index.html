@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DZ 24. Hamburgers</title>
+</head>
+<body>
+
+<h1>ДЗ 24. Гамбургери</h1>
+
+<h3>Мережа фастфудів пропонує кілька видів гамбургерів:</h3>
+
+<ul>
+    <li>маленький (50 тугриків, 20 калорій);</li>
+    <li>великий (100 тугриків, 40 калорій).</li>
+</ul>
+
+<h3>Гамбургер може бути з одним із декількох видів начинок:</h3>
+
+<ul>
+    <li>сиром (+ 10 тугриків, + 20 калорій);</li>
+    <li>салатом (+ 20 тугриків, + 5 калорій);</li>
+    <li>картоплею (+ 15 тугриків, + 10 калорій).</li>
+</ul>
+
+<h3>Можна додати добавки:</h3>
+
+<ul>
+    <li>посипати приправою (+15 тугриків, 0 калорій) - полити майонезом (+ 20 тугриків, +5 калорій).</li>
+    <li>Напишіть програму, яка розраховує вартість та калорійність гамбургера. Використовуйте ООП підхід.</li>
+    <li>(підказка: потрібен клас Гамбургер, константи, методи для вибору опцій та розрахунку потрібних величин)</li>
+</ul>
+
+<h3>Приклад роботи коду:</h3>
+
+<pre>
+        // маленький гамбургер з начинкою з сиру
+    var hamburger = new Hamburger(Hamburger .SIZE_SMALL, Hamburger.STUFFING_CHEESE);
+
+    // добавка з майонезу
+    hamburger.addTopping(Hamburger.TOPPING_MAYO);
+
+    // запитаємо скільки там калорій
+    console.log(“Calories: “ + hamburger.calculate ());
+
+    // скільки коштує
+    console.log("Price: “ + hamburger.calculatePrice());
+
+    // я тут передумав і вирішив додати ще приправу
+    hamburger.addTopping(Hamburger .TOPPING_SAUCE);
+
+    // А скільки тепер коштує?
+    console.log("Price with sauce: “ + hamburger.calculatePrice());
+</pre>
+
+<script src="./js/hamburgers.js"></script>
+</body>
+</html>
