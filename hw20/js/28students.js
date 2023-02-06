@@ -1,7 +1,4 @@
 class Human {
-    name = null;
-    surname = null;
-    age = null;
 
     constructor(person = { name: 'John', surname: 'Doe', age: 30 }) {
         this.name = person.name;
@@ -12,6 +9,7 @@ class Human {
     getFullName() {
         return `${this.name} ${this.surname}`;
     }
+
     setFullName(fullName) {
         const [ name, surname ] = fullName.split(' ');
 
@@ -21,7 +19,6 @@ class Human {
 }
 
 class Student extends Human {
-    marks = [];
 
     constructor(person = { name: 'JohnS', surname: 'DoeS', age: 18, marks: [] }) {
         super(person);
@@ -29,24 +26,24 @@ class Student extends Human {
         this.marks = person.marks;
     }
 
-    getMarks() {
-        return this.marks;
-    }
     getAverageMark() {
         return this.marks.reduce((total, mark) => total + mark, 0) / this.marks.length;
     }
+
     getMinMark() {
         return Math.min(...this.marks);
     }
+
     getMaxMark() {
         return Math.max(...this.marks);
     }
 }
 
 class FakeStudent extends Student {
+    static MAX_MARK = 12;
+    static MULTIPLIER = 2;
+
     #cheatedMarks = [];
-    #MAX_MARK = 12;
-    #MULTIPLIER = 2;
 
     constructor(person = { name: 'JohnFS', surname: 'DoeFS', age: 24, marks: [] }) {
         super(person);
@@ -55,29 +52,27 @@ class FakeStudent extends Student {
     }
 
     #cheat() {
-        return this.marks.reduce((cheatedMarks, mark) => {
-            const double = mark * this.#MULTIPLIER;
-            const target = double > this.#MAX_MARK ? this.#MAX_MARK : double;
+        return this.marks.map(mark => {
+            const double = mark * FakeStudent.MULTIPLIER;
 
-            return [...cheatedMarks, target];
-        }, [])
+            return double > FakeStudent.MAX_MARK ? FakeStudent.MAX_MARK : double;
+        });
     }
-    getMarks() {
-        return this.#cheatedMarks;
-    }
+
     getAverageMark() {
         return this.#cheatedMarks.reduce((total, mark) => total + mark, 0) / this.#cheatedMarks.length;
     }
+
     getMinMark() {
         return Math.min(...this.#cheatedMarks);
     }
+
     getMaxMark() {
         return Math.max(...this.#cheatedMarks);
     }
 }
 
 class Teacher extends Human {
-    group = [];
 
     constructor(person = { name: 'JohnT', surname: 'DoeT', age: 35, group: [] }) {
         super(person);
@@ -88,15 +83,19 @@ class Teacher extends Human {
     getListOfNamesByAverageMark() {
         return [...this.group].sort((studentA, studentB) => studentA.getAverageMark() - studentB.getAverageMark()).map(student => student.name);
     }
+
     getStudentByName(name) {
         return this.group.find(student => student.name === name);
     }
+
     removeStudentByName(name){
         this.group = this.group.filter(student => student.name !== name);
     }
+
     updateStudentByName(name, newStudent) {
         this.group = this.group.map(student => student.name === name ? newStudent : student);
     }
+
     findFakeStudent() {
         const fakeStudent = this.group.find(student => student instanceof FakeStudent);
 
@@ -177,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
     teacher.group.forEach(student => {
         console.group(`${student.getFullName()}`);
         console.log(`Age: ${student.age}`);
-        console.group(`Marks: ${student.getMarks()}`);
+        console.group(`Marks: ${student.marks}`);
         console.log(`Min: ${student.getMinMark()}`);
         console.log(`Max: ${student.getMaxMark()}`);
         console.log(`Average: ${student.getAverageMark()}`);
