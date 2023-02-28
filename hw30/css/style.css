@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.todo-app header {
+    padding: 40px;
+    background-color: #b4f6ff;
+}
+
+.todo-app header .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.todo-app header .actions button {
+    width: 100%;
+    padding: 12px;
+    background-color: #666;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 6px;
+    transition: all .2s ease;
+}
+
+.todo-app header .actions button:hover {
+    background-color: #0d8c66;
+}
+
+.todo-app main {
+    flex: 1;
+    padding: 40px;
+}
+
+.todo-app main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.todo-app main ul > li {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    cursor: pointer;
+    user-select: none;
+    transition: all .2s ease;
+}
+
+.todo-app main ul > li:nth-child(odd) {
+    background-color: #ebebeb;
+}
+
+.todo-app main ul > li:hover {
+    background-color: #ddd;
+}
+
+.todo-app main ul > li.selected {
+    background-color: #c00;
+    color: #fff;
+}
+
+.todo-app footer {
+    padding: 40px;
+    background-color: #b4f6ff;
+    text-align: center;
+}
