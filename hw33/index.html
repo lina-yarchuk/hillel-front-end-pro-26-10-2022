@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <button type="button" class="btn add-product-btn">
+            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none"
+                 stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+        </button>
+
+        <h1>Products</h1>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="products">
+            Loading...
+        </div>
+    </div>
+</main>
+<aside class="product-details"></aside>
+
+<footer>
+    <div class="container">
+        <p class="copy">&copy; 2023 Lina Yarchuk</p>
+    </div>
+</footer>
+
+<template data-name="productImage">
+    <img src="./img/product-default.jpg" alt="logo">
+</template>
+
+<template data-name="productCard">
+    <div class="card product-card">
+        <div class="main-image"></div>
+        <h2></h2>
+        <p class="price"></p>
+        <button type="button">
+            Add to Cart
+        </button>
+    </div>
+</template>
+
+<template data-name="productDetails">
+    <div class="card product-details-card">
+        <div class="gallery"></div>
+        <h3></h3>
+        <p class="price"></p>
+        <p class="description"></p>
+        <button type="button">
+            Add to Cart
+        </button>
+    </div>
+</template>
+
+<template data-name="detailsArea">
+    <div class="details">
+        <div class="head">
+            <h2></h2>
+            <div class="actions">
+                <button type="button" class="btn edit-btn">
+                    <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none"
+                         stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </button>
+                <button type="button" class="btn close-btn">
+                    <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none"
+                         stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="content"></div>
+    </div>
+</template>
+
+<template data-name="productForm">
+    <form class="product-form">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input id="price" name="price" type="number">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="images">Images url:</label>
+            <input id="images" name="images" type="text">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn"></button>
+        </div>
+    </form>
+</template>
+
+<script type="module" src="./js/index.js"></script>
+</body>
+</html>
