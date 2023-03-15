@@ -9,6 +9,7 @@ export default class Products {
     products = null;
 
     #templates = null;
+    #itemsDisplayed = 12;
     #productsContainer = document.querySelector('.products');
     #productDetailsContainer = document.querySelector('.product-details');
     #addProductBtn = document.querySelector('.add-product-btn');
@@ -37,7 +38,7 @@ export default class Products {
     }
 
     async #getProducts() {
-        const url = urls.productsPartial(12);
+        const url = urls.productsPartial(this.#itemsDisplayed);
 
         this.products = await fetch(url).then(response => response.json());
 
@@ -90,7 +91,7 @@ export default class Products {
     renderProductEdit(product) {
         const title = product.title;
         const closeFn = this.hideProductDetails.bind(this);
-        const saveFn = this.#saveProduct.bind(this);
+        const saveFn = this.#editProduct.bind(this);
         const content = this.#templates.getProductForm(product, 'Save', saveFn);
 
         this.renderDetails({ title, closeFn, content });
@@ -125,7 +126,7 @@ export default class Products {
         this.renderProductDetails(newProduct);
     }
 
-    async #saveProduct(event, data, productId) {
+    async #editProduct(event, data, productId) {
         event.preventDefault();
 
         const url = urls.product(productId);
