@@ -49,6 +49,12 @@ export default class Storage {
 		this.saveToStorage();
 	}
 
+	toggleCompleteTasks(state) {
+		this.todos.forEach(todo => todo.completed = state);
+
+		this.saveToStorage();
+	}
+
 	updateTask(task) {
 		this.todos = this.todos.map(todo => todo.id === task.id ? task : todo );
 

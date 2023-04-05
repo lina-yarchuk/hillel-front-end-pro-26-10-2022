@@ -87,13 +87,18 @@ body {
 	padding: 16px 16px 16px 60px;
 	border: none;
 	background: rgba(0, 0, 0, 0.003);
-	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+	box-shadow: inset 0 -1px 1px rgba(0,0,0,0.03);
+}
+
+.new-todo-input:focus {
+	outline: 1px solid rgba(100, 100, 100, .25);
 }
 
 .main {
 	position: relative;
 	z-index: 2;
 	border-top: 1px solid #e6e6e6;
+	margin-top: 1px;
 }
 
 .toggle-all {
@@ -114,6 +119,7 @@ body {
 	top: -52px;
 	left: -13px;
 	transform: rotate(90deg);
+	cursor: pointer;
 }
 
 .toggle-all + label:before {
@@ -152,6 +158,7 @@ body {
 	bottom: 0;
 	margin: auto 0;
 	border: none;
+	cursor: pointer;
 	-webkit-appearance: none;
 	appearance: none;
 }
@@ -165,6 +172,10 @@ body {
 	background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
 	background-repeat: no-repeat;
 	background-position: center left;
+}
+
+.todo-list li .toggle + label:hover {
+	background-color: #fafafa;
 }
 
 .todo-list li .toggle:checked + label {
@@ -197,6 +208,7 @@ body {
 	color: #cc9a9a;
 	margin-bottom: 11px;
 	transition: color 0.2s ease-out;
+	cursor: pointer;
 }
 
 .todo-list li .remove:hover {
@@ -263,6 +275,7 @@ body {
 	text-decoration: none;
 	border: 1px solid transparent;
 	border-radius: 3px;
+	cursor: pointer;
 }
 
 .filters li button:hover {

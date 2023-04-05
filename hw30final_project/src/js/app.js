@@ -1,8 +1,9 @@
 import TaskList from './list.js';
 import Storage from './storage.js';
-import Templates from "./templates.js";
+import Templates from './templates.js';
 
 export default class App {
+	static initialTab = 'all';
 	static SUBMIT_KEY = 'Enter';
 	static CLEAR_KEY = 'Escape';
 
@@ -24,6 +25,8 @@ export default class App {
 		this.filterActionsElements = this.filtersConteinerElement.querySelectorAll('button');
 
 		this.clearCompletedElement = this.footerElement.querySelector('.clear-completed');
+
+		this.activeTab = App.initialTab;
 
 		this.bindEvents();
 
@@ -92,27 +95,25 @@ export default class App {
 		const { tabName } = target.dataset;
 
 		this.setActiveTab(tabName);
-		this.renderList(tabName);
+		this.renderList();
 	}
 
 	setActiveTab(activeTabName) {
+		this.activeTab = activeTabName;
+
 		this.filterActionsElements.forEach(button => {
 			const { tabName } = button.dataset;
 
 			button.classList.remove('selected');
 
-			if (tabName === activeTabName) {
+			if (tabName === this.activeTab) {
 				button.classList.add('selected');
 			}
 		});
 	}
 
-	renderList(target = 'all') {
-		const list = this.list.getOutputElement(target);
-
-		if (target === 'all') {
-			this.setActiveTab(target);
-		}
+	renderList() {
+		const list = this.list.getOutputElement(this.activeTab);
 
 		this.listBoxElement.innerHTML = '';
 		this.listBoxElement.append(list);

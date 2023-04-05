@@ -7,7 +7,7 @@ export default class TaskList {
 		this.render = render;
 		this.showTodoLeft = showTodoLeft;
 
-		this.updateTaskList();
+		this.#tasks = this.storage.todos;
 	}
 
 	getOutputElement(target) {
@@ -28,6 +28,9 @@ export default class TaskList {
 
 	updateTaskList() {
 		this.#tasks = this.storage.todos;
+
+		this.render();
+		this.showTodoLeft();
 	}
 
 	addTask(text) {
@@ -38,26 +41,30 @@ export default class TaskList {
 		this.updateTaskList();
 	}
 
-	completeAll(completed) {
-		this.#tasks.forEach(task => task.completed = completed);
-
-		this.updateTaskList();
-	}
-
 	removeTask(task) {
+		// const isRemove = confirm('Are you sure to remove task?');
+		//
+		// if (!isRemove) {
+		// 	return;
+		// }
+
 		this.storage.remove(task.id);
 
 		this.updateTaskList();
-		this.render();
-		this.showTodoLeft();
 	}
 
 	completeTask(task) {
 		this.storage.updateTask(task);
 
 		this.updateTaskList();
+	}
 
-		this.showTodoLeft();
+	completeAll(completed) {
+		this.#tasks.forEach(task => task.completed = completed);
+
+		this.storage.toggleCompleteTasks(completed);
+
+		this.updateTaskList();
 	}
 
 	clearCompleted() {
