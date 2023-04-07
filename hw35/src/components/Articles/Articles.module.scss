@@ -1,0 +1,23 @@
+h1 {
+text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .card {
+    margin-bottom: 15px;
+    padding: 15px;
+    color: #222;
+    border: 1px solid #ccc;
+    flex: 1;
+    min-width: 300px;
+
+    > h4 {
+      text-transform: capitalize;
+      margin: 0;
+    }
+  }
+}
