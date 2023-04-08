@@ -1,9 +1,9 @@
 import Layout from './layouts/Main';
 
 const App = () => {
-  return (
-      <Layout />
-  )
+    return (
+        <Layout />
+    )
 }
 
 export default App;

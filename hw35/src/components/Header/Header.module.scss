@@ -1,63 +1,66 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-  .wrapper {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-    .menu {
-      list-style-type: none;
-      padding-right: 20px;
-      border-right: 1px solid #EDEDED;
+	.wrapper {
+		display: flex;
+		align-items: center;
 
-      > li {
-        display: inline-block;
-        > a {
-          display: block;
-          font-size: 16px;
-          color: #222;
-          padding: 12px;
-          text-decoration: none;
-        }
-      }
-      :hover {
-        background-color: #3dd3e7;
-      }
-    }
+		.menu {
+			list-style-type: none;
+			padding-right: 20px;
+			border-right: 1px solid #EDEDED;
 
-    .buttons {
-      display: flex;
-      align-items: center;
-      padding-left: 15px;
-      
-      > button {
-        cursor: pointer;
-        border: none;
-        outline: none;      
-        background-color: transparent;
-      }
+			> li {
+				display: inline-block;
 
-      .login-button {
-        padding: 10px 15px;
-        border: 1px solid #e1e1e1;
-      }
+				> a {
+					display: block;
+					font-size: 16px;
+					color: #222;
+					padding: 12px;
+					text-decoration: none;
+				}
+			}
 
-      .sign-up-button {
-        margin-left: 10px;
-        padding: 10px 20px;
-        border: 1px solid #e1e1e1;
-      }
-      :hover {
-        background-color: #3dd3e7;
-      }
-    }
-  }
+			:hover {
+				background-color: #3dd3e7;
+			}
+		}
 
-  @media (max-width: 768px) {
-    .wrapper {
-        width: 100%;
-    }
-  }
+		.buttons {
+			display: flex;
+			align-items: center;
+			padding-left: 15px;
+
+			> button {
+				cursor: pointer;
+				border: none;
+				outline: none;
+				background-color: transparent;
+			}
+
+			.login-button {
+				padding: 10px 15px;
+				border: 1px solid #e1e1e1;
+			}
+
+			.sign-up-button {
+				margin-left: 10px;
+				padding: 10px 20px;
+				border: 1px solid #e1e1e1;
+			}
+
+			:hover {
+				background-color: #3dd3e7;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.wrapper {
+			width: 100%;
+		}
+	}
 }
