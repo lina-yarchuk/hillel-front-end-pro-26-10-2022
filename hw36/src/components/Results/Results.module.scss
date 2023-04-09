@@ -1,0 +1,54 @@
+.Results {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 40px 10px;
+	justify-content: center;
+
+	.Result {
+		background-color: rgba(160, 240, 255, .5);
+		border-radius: 16px;
+
+		.Title {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 28px;
+
+			span {
+				font-size: 5em;
+				margin: 0 5rem;
+			}
+		}
+	}
+
+	button {
+		text-align: center;
+		font-size: 21px;
+		border-radius: 15px;
+		margin: 0 auto;
+		padding: 16px 24px;
+		cursor: pointer;
+		background-color: #e30000;
+		color: #fff;
+		box-shadow: 0 4px 0 darken(#e30000, 10%);
+		border: 1px solid darken(#e30000, 15%);
+		transition: all 0.05s ease-in-out;
+
+		&:hover {
+			transform: translateY(-2px);
+		}
+
+		&:active {
+			transform: translateY(2px);
+			box-shadow: none;
+		}
+
+		&.ResetBtn {
+			margin: 0;
+			background-color: #8844e0;
+			box-shadow: 0 4px 0 darken(#8844e0, 10%);
+			border: 1px solid darken(#8844e0, 15%);
+		}
+	}
+}
