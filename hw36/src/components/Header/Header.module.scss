@@ -1,0 +1,16 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+
+	.wrapper {
+		h1 {
+			font-weight: 400;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.wrapper {
+			width: 100%;
+		}
+	}
+}
