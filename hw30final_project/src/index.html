@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TODOList</title>
+	</head>
+	<body>
+		<section class="todo-app">
+			<header class="header">
+				<h1>todos</h1>
+				<input class="new-todo-input" placeholder="What needs to be done?" autofocus aria-label="new todo">
+			</header>
+			<section class="main">
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<div class="todo-list-box"></div>
+				<footer class="footer">
+					<span class="todo-count"></span>
+					<ul class="filters">
+						<li>
+							<button class="selected" data-tab-name="all">All</button>
+						</li>
+						<li>
+							<button data-tab-name="active">Active</button>
+						</li>
+						<li>
+							<button data-tab-name="completed">Completed</button>
+						</li>
+					</ul>
+					<button class="clear-completed">Clear completed</button>
+				</footer>
+			</section>
+		</section>
+		<footer class="info">
+			<p>2023 &copy; Lina Yarchuk</p>
+		</footer>
+
+		<template data-name="taskList">
+			<ul class="todo-list"></ul>
+		</template>
+
+		<template data-name="taskItem">
+			<li data-id>
+				<div class="task">
+					<input class="toggle" type="checkbox" aria-label="complete toggle">
+					<label></label>
+					<button class="remove"></button>
+				</div>
+			</li>
+		</template>
+
+		<template data-name="todoCount">
+			<span class="count"></span> item<span class="ext"></span> left
+		</template>
+	</body>
+</html>
