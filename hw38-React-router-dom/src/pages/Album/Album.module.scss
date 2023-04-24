@@ -1,0 +1,28 @@
+.Homepage {
+	position: relative;
+}
+
+.Intersection {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	.Item {
+		flex: 1;
+
+		img {
+			width: 100%;
+			min-width: 150px;
+		}
+	}
+}
+
+.Card {
+	display: flex;
+	flex-direction: column;
+
+	:hover {
+		background-color: #f44336;
+	}
+
+}

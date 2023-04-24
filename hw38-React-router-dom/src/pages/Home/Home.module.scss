@@ -1,0 +1,14 @@
+.Homepage {
+  position: relative;
+}
+
+.Intersection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+}
