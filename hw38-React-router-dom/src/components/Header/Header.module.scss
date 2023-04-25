@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+
+		.menu {
+			list-style-type: none;
+			padding-right: 20px;
+			border-right: 1px solid #EDEDED;
+
+			> li {
+				display: inline-block;
+
+				> a {
+					text-decoration: none;
+					display: block;
+					font-size: 22px;
+					color: #222;
+					padding: 12px;
+				}
+			}
+
+			:hover {
+				background-color: #f44336;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.wrapper {
+			width: 100%;
+		}
+	}
+}
