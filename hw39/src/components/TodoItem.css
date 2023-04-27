@@ -1,0 +1,29 @@
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 12px 6px;
+    border: 1px solid #999;
+    background: rgba(0, 0, 0, 0.003);
+    font-size: 1.6em;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+
+.title {
+    flex: 1;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input:checked + span {
+    text-decoration: line-through;
+}
