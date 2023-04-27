@@ -1,0 +1,35 @@
+.input-area {
+    display: flex;
+}
+
+.new-todo {
+    flex: 1;
+    position: relative;
+    margin: 0;
+    font-size: 22px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.4em;
+    color: inherit;
+    padding: 6px;
+    border: 1px solid #999;
+    background: rgba(0, 0, 0, 0.003);
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.button {
+    border-color: rgba(175, 47, 47, 0.2);
+    margin: 0;
+    padding: 8px;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    color: #fff;
+    appearance: none;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #f00;
+}
