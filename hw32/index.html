@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw-32 sign up form</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/index.js" type="module"></script>
+</head>
+
+<body>
+<div class="signup-page">
+    <header>
+        <div class="container">
+            <h1>Sign up</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="username">
+                        Username
+                    </label>
+                    <input id="username" type="text" placeholder="Enter your name" name="username">
+                    <div class="help-block" data-for="username"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input id="email" class="form-control" type="text" placeholder="Enter email" name="email">
+                    <div class="help-block" data-for="email"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input id="password" class="form-control" type="password" placeholder="Enter password" name="password">
+                    <div class="help-block" data-for="password"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        Confirm Password:
+                    </label>
+                    <input id="confirmPassword" class="form-control" type="password" placeholder="Reenter your password" name="confirmPassword">
+                    <div class="help-block" data-for="confirmPassword"></div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">
+                        Sing up
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copy">&copy; 2023 Lina Yarchuk</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

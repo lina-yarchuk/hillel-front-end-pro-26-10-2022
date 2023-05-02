@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.signup-page header {
+    padding: 40px;
+    background-color: #b4f6ff;
+}
+
+.signup-page main {
+    flex: 1;
+    padding: 40px;
+}
+
+.signup-page main .signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup-page main .signup-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.signup-page main .signup-form .form-group label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.signup-page main .signup-form .form-group input {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 1.24rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: 1px solid #495057;
+    border-radius: 1.4rem;
+}
+.signup-page main .signup-form .form-group input.error {
+    border-color: #f00;
+    outline: #f00;
+}
+
+.signup-page main .signup-form .form-group .help-block {
+    color: #f00;
+}
+
+.signup-page main .signup-form .form-group .btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 1.4rem;
+    background-color: #0d6efd;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.signup-page main .signup-form .form-group .btn:hover {
+    background-color: #0b5ed7;;
+    border-color: #0a58ca;
+}
+
+.signup-page footer {
+    padding: 40px;
+    background-color: #b4f6ff;
+    text-align: center;
+}
+
+
+
+
+
+
